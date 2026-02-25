@@ -6,6 +6,9 @@ extends Camera2D
 func _process(delta: float) -> void:
 	var direction = Vector2.ZERO
 
+	if Input.is_action_just_pressed("back_to_main_menu"):
+		get_tree().quit()
+
 	if Input.is_action_pressed("up"):
 		direction.y -= 1
 	if Input.is_action_pressed("down"):
