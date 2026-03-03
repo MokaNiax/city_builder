@@ -91,12 +91,19 @@ tile_set = SubResource("TileSet_wijl4")
 script = ExtResource("4_v158k")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=309781934]
-position = Vector2(577, 324)
+position = Vector2(595, 336)
+ignore_rotation = false
 zoom = Vector2(0.8, 0.8)
 script = ExtResource("5_h4fw4")
 
-[node name="Control" parent="Camera2D" unique_id=1321333122 instance=ExtResource("6_i6g32")]
-offset_left = -714.0
-offset_top = -410.0
-offset_right = -714.0
-offset_bottom = -410.0
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1659597657]
+
+[node name="ui" parent="CanvasLayer" unique_id=1321333122 instance=ExtResource("6_i6g32")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+offset_left = -240.0
+offset_top = -273.0
+offset_right = 240.0
+grow_vertical = 0
