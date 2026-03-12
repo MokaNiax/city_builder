@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ca3b8wq74l1y4"]
 
-[ext_resource type="Texture2D" uid="uid://02p15yhsmvah" path="res://Assets/Textures/house.png" id="1_jxero"]
+[ext_resource type="Texture2D" uid="uid://cpaueudn30ahc" path="res://Assets/Textures/house_lvl1.png" id="1_qdvrb"]
 [ext_resource type="Script" uid="uid://dqll6a3xi7i15" path="res://Scripts/BottomBar/build_house.gd" id="2_qdvrb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wviqb"]
@@ -82,7 +82,7 @@ offset_bottom = 77.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_qdvrb")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_jxero")
 theme_override_styles/hover = SubResource("StyleBoxFlat_nf4gj")
-icon = ExtResource("1_jxero")
+icon = ExtResource("1_qdvrb")
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("2_qdvrb")
