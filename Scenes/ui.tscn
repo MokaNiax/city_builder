@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://ca3b8wq74l1y4"]
 
+[ext_resource type="Texture2D" uid="uid://02p15yhsmvah" path="res://Assets/Textures/house.png" id="1_jxero"]
+[ext_resource type="Script" uid="uid://dqll6a3xi7i15" path="res://Scripts/BottomBar/build_house.gd" id="2_qdvrb"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wviqb"]
 bg_color = Color(0.20683828, 0.16175967, 0.08569554, 1)
 border_width_left = 10
@@ -12,6 +15,38 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qdvrb"]
+bg_color = Color(0.5447649, 0.47217816, 0.26205337, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.54509807, 0.47058824, 0.2627451, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jxero"]
+bg_color = Color(0.26666668, 0.22745098, 0.10980392, 1)
+border_color = Color(0.26666668, 0.22745098, 0.10980392, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nf4gj"]
+bg_color = Color(0.26666668, 0.22745098, 0.10980392, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.26666668, 0.22745098, 0.10980392, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [node name="Control" type="Control" unique_id=1321333122]
 layout_mode = 3
@@ -34,4 +69,22 @@ offset_left = -351.0
 offset_top = -133.0
 offset_right = 352.0
 offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_wviqb")
+
+[node name="Button" type="Button" parent="Panel" unique_id=701038220]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 19.0
+offset_right = 76.0
+offset_bottom = 77.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_qdvrb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jxero")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nf4gj")
+icon = ExtResource("1_jxero")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_qdvrb")
+
+[connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]

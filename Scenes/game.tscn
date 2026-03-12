@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://cfbdfxxqdhkk0"]
 
-[ext_resource type="Texture2D" uid="uid://cc8uc4v6xm4pa" path="res://Assets/Grounds/ground.png" id="1_wowpa"]
-[ext_resource type="Texture2D" uid="uid://itrvdw2h1y20" path="res://Assets/Grounds/water.png" id="2_i6g32"]
-[ext_resource type="Texture2D" uid="uid://qbdgjq1w4t3j" path="res://Assets/Grounds/sand.png" id="3_1l0tm"]
+[ext_resource type="Texture2D" uid="uid://cc8uc4v6xm4pa" path="res://Assets/Textures/ground.png" id="1_wowpa"]
+[ext_resource type="Texture2D" uid="uid://itrvdw2h1y20" path="res://Assets/Textures/water.png" id="2_i6g32"]
+[ext_resource type="Texture2D" uid="uid://qbdgjq1w4t3j" path="res://Assets/Textures/sand.png" id="3_1l0tm"]
 [ext_resource type="Script" uid="uid://ioga0lnb4bmb" path="res://Scripts/Ground/random_rotation.gd" id="4_v158k"]
 [ext_resource type="Script" uid="uid://b2scikqdiv0i4" path="res://Scripts/Player/camera.gd" id="5_h4fw4"]
 [ext_resource type="PackedScene" uid="uid://ca3b8wq74l1y4" path="res://Scenes/ui.tscn" id="6_i6g32"]
@@ -23,12 +23,16 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/terrains_peering_bit/top_left_corner = 0
 0:0/0/terrains_peering_bit/top_side = 0
 0:0/0/terrains_peering_bit/top_right_corner = 0
+0:0/0/custom_data_0 = "Grass"
 0:0/1 = 1
 0:0/1/flip_h = true
+0:0/1/custom_data_0 = "Grass"
 0:0/2 = 2
 0:0/2/flip_v = true
+0:0/2/custom_data_0 = "Grass"
 0:0/3 = 3
 0:0/3/transpose = true
+0:0/3/custom_data_0 = "Grass"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_urblq"]
 resource_name = "Water"
@@ -46,12 +50,16 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/terrains_peering_bit/top_left_corner = 2
 0:0/0/terrains_peering_bit/top_side = 2
 0:0/0/terrains_peering_bit/top_right_corner = 2
+0:0/0/custom_data_0 = "Water"
 0:0/1 = 1
 0:0/1/flip_h = true
+0:0/1/custom_data_0 = "Water"
 0:0/2 = 2
 0:0/2/flip_v = true
+0:0/2/custom_data_0 = "Water"
 0:0/3 = 3
 0:0/3/transpose = true
+0:0/3/custom_data_0 = "Water"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iw27f"]
 resource_name = "Sand"
@@ -68,6 +76,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/terrains_peering_bit/top_left_corner = 1
 0:0/0/terrains_peering_bit/top_side = 1
 0:0/0/terrains_peering_bit/top_right_corner = 1
+0:0/0/custom_data_0 = "Sand"
 
 [sub_resource type="TileSet" id="TileSet_wijl4"]
 tile_size = Vector2i(32, 32)
@@ -79,6 +88,8 @@ terrain_set_0/terrain_1/name = "Sand"
 terrain_set_0/terrain_1/color = Color(0.86184645, 0.77786297, 0.476058, 1)
 terrain_set_0/terrain_2/name = "Water"
 terrain_set_0/terrain_2/color = Color(0.24343115, 0.41357914, 0.82526004, 1)
+custom_data_layer_0/name = "type_ground"
+custom_data_layer_0/type = 4
 sources/0 = SubResource("TileSetAtlasSource_c7s6e")
 sources/1 = SubResource("TileSetAtlasSource_urblq")
 sources/2 = SubResource("TileSetAtlasSource_iw27f")
