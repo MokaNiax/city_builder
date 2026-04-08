@@ -48,6 +48,8 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qdvrb"]
+
 [node name="Control" type="Control" unique_id=1321333122]
 layout_mode = 3
 anchors_preset = 15
@@ -58,7 +60,7 @@ offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="." unique_id=1505977842]
+[node name="BottomBar" type="Panel" parent="." unique_id=1505977842]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -73,7 +75,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_wviqb")
 
-[node name="Button" type="Button" parent="Panel" unique_id=701038220]
+[node name="Button" type="Button" parent="BottomBar" unique_id=701038220]
 layout_mode = 0
 offset_left = 19.0
 offset_top = 19.0
@@ -87,4 +89,46 @@ icon_alignment = 1
 expand_icon = true
 script = ExtResource("2_qdvrb")
 
-[connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]
+[node name="TopBar" type="Panel" parent="." unique_id=685368664]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -528.0
+offset_right = 528.0
+offset_bottom = 111.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_qdvrb")
+
+[node name="Pop" type="Label" parent="TopBar" unique_id=518120344]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -52.5
+offset_right = 471.0
+offset_bottom = 52.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "👥 N/A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Money" type="Label" parent="TopBar" unique_id=1298876996]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -471.0
+offset_top = -52.5
+offset_bottom = 52.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "💰 N/A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="BottomBar/Button" to="BottomBar/Button" method="_on_pressed"]
