@@ -38,7 +38,7 @@ func _input(event: InputEvent) -> void:
 			ghost.rotation_degrees += 90
 
 func _on_pressed() -> void:
-	if not in_build:
+	if not in_build and Game.money >= 5:
 		get_viewport().set_input_as_handled()
 		create_ghost()
 
@@ -52,8 +52,16 @@ func build_house():
 	if ghost != null:
 		ghost.modulate = Color(1, 1, 1, 1)
 		ghost.modulate.a = 1.0
+		
+		ghost.add_to_group("house")
+		
+		var rent_value = randi_range(1, 5)
+		ghost.set_meta("rent_value", rent_value)
+		
 		ghost = null 
 		in_build = false
+	Game.sub_money(5)
+	Game.add_population(randi_range(1, 3))
 
 func cancel_build():
 	if ghost != null:

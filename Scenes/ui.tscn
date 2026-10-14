@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cpaueudn30ahc" path="res://Assets/Textures/house_lvl1.png" id="1_qdvrb"]
 [ext_resource type="Script" uid="uid://dqll6a3xi7i15" path="res://Scripts/BottomBar/build_house.gd" id="2_qdvrb"]
+[ext_resource type="Script" uid="uid://cwhnwi08t262a" path="res://Scripts/TopBar/draw_game_var.gd" id="3_nf4gj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wviqb"]
 bg_color = Color(0.20683828, 0.16175967, 0.08569554, 1)
@@ -99,6 +100,7 @@ offset_right = 528.0
 offset_bottom = 111.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_qdvrb")
+script = ExtResource("3_nf4gj")
 
 [node name="Pop" type="Label" parent="TopBar" unique_id=518120344]
 layout_mode = 1
