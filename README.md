@@ -12,6 +12,6 @@ _Game engine :_
 > [!IMPORTANT]
 > W/A/S/D to move around\
 > Q/D to turn camera\
-> R to rotate a build
-> Escape to leave the game
+> R to rotate a build\
+> Escape to leave the game\
 > Mouse wheel to zoom and unzoom
