@@ -7,7 +7,7 @@ var population: int = 0
 
 func _ready() -> void:
 	timer = Timer.new()
-	timer.wait_time = 5.0
+	timer.wait_time = 60.0
 	timer.autostart = true
 	add_child(timer)
 	
